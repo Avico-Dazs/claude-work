@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "承認前に ADR 草案が提示された",
+      "passed": true,
+      "evidence": "Turn2 で '📋 ADR 作成提案' が提示、ファイル作成なし"
+    },
+    {
+      "text": "ユーザー承認後にのみ ADR ファイルが作成された",
+      "passed": true,
+      "evidence": "Turn3 の OK 後に 0001-use-prisma-as-orm.md が作成"
+    },
+    {
+      "text": "草案に Stage・Decision・Verification が含まれる",
+      "passed": true,
+      "evidence": "Stage: Basic Design, Decision: Prisma 採用, Verification: npx prisma validate"
+    },
+    {
+      "text": "確定通知が出た",
+      "passed": true,
+      "evidence": "'📝 ADR-0001 を確定しました（Basic Design: ORM に Prisma を採用する）'"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

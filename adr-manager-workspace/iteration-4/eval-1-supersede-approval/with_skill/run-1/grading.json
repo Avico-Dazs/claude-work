@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Supersede の変更提案が提示された",
+      "passed": true,
+      "evidence": "conversation.md に Supersede 変更提案が含まれる"
+    },
+    {
+      "text": "旧 ADR の変更と新 ADR の作成が一緒に提案された",
+      "passed": true,
+      "evidence": "ADR-0001 ステータス変更と ADR-0002 作成が一つの提案に含まれる"
+    },
+    {
+      "text": "承認後に旧 ADR が Superseded になった",
+      "passed": true,
+      "evidence": "ADR-0001 の Status が 'Superseded by ADR-0002'"
+    },
+    {
+      "text": "承認後に新 ADR が作成された",
+      "passed": true,
+      "evidence": "0002-migrate-to-graphql.md が存在"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

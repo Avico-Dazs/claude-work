@@ -1,0 +1,11 @@
+{
+  "eval_id": 1,
+  "eval_name": "ears-pattern-coverage",
+  "prompt": "要件定義書を作ってください。ユーザーが商品をカートに入れてから決済完了までのフローと、在庫が不足している場合のエラーハンドリングが含まれるようにしてください。",
+  "assertions": [
+    {"id": "ears_when_pattern", "description": "カート/注文に関する WHEN パターンが含まれる"},
+    {"id": "ears_if_then_pattern", "description": "在庫不足に関する IF...THEN パターンが含まれる"},
+    {"id": "rdra_structure", "description": "RDRA3.0 基本セクション（システムコンテキスト・ユースケース・要件一覧）が存在する"},
+    {"id": "req_id_table", "description": "REQ-ID と EARS パターン列を持つ要件一覧テーブルがある"}
+  ]
+}

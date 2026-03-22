@@ -1,0 +1,33 @@
+{
+  "eval_id": 1,
+  "eval_name": "ears-pattern-coverage",
+  "variant": "with_skill",
+  "expectations": [
+    {
+      "text": "カート/注文に関する WHEN パターンが含まれる",
+      "passed": true,
+      "evidence": "REQ-002: 'WHEN 顧客が商品をカートに追加する', REQ-006: 'WHEN 顧客が注文を確定する' など複数の WHEN パターンを確認"
+    },
+    {
+      "text": "在庫不足に関する IF...THEN パターンが含まれる",
+      "passed": true,
+      "evidence": "REQ-005: 'IF 指定数量が在庫数を超える THEN', REQ-011: 'IF 決済開始時に在庫不足商品が存在する THEN', REQ-016 など複数確認"
+    },
+    {
+      "text": "RDRA3.0 基本セクション（システムコンテキスト・ユースケース・要件一覧）が存在する",
+      "passed": true,
+      "evidence": "## 1. システムコンテキスト, ## 3. ユースケース, ## 6. 要件一覧（EARS）の全セクションを確認。全6セクション完備"
+    },
+    {
+      "text": "REQ-ID と EARS パターン列を持つ要件一覧テーブルがある",
+      "passed": true,
+      "evidence": "| REQ-ID | カテゴリ | EARSパターン | 要件文 | 関連UC | 関連BR | の形式で16件の機能要件と5件の非機能要件を確認"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

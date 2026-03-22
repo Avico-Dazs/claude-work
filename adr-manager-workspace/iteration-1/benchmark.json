@@ -1,0 +1,303 @@
+{
+  "metadata": {
+    "skill_name": "adr-manager",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-03-22T05:49:28Z",
+    "evals_run": [
+      0,
+      1,
+      2
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "ADR \u30d5\u30a1\u30a4\u30eb\u304c\u4f5c\u6210\u3055\u308c\u305f",
+          "passed": true,
+          "evidence": "0001-adopt-nextjs-app-router.md \u304c outputs/ \u306b\u5b58\u5728"
+        },
+        {
+          "text": "Stage: Basic Design \u304c\u542b\u307e\u308c\u308b",
+          "passed": true,
+          "evidence": "\u30d5\u30a1\u30a4\u30eb\u306b '| **Stage** | Basic Design |' \u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "Verification \u30d5\u30a3\u30fc\u30eb\u30c9\u306b npm run test:arch \u304c\u542b\u307e\u308c\u308b",
+          "passed": true,
+          "evidence": "\u30d5\u30a1\u30a4\u30eb\u306b 'npm run test:arch' \u304c\u8a18\u8f09\u3055\u308c\u3066\u3044\u308b"
+        },
+        {
+          "text": "Status \u30d5\u30a3\u30fc\u30eb\u30c9\u304c\u542b\u307e\u308c\u308b",
+          "passed": true,
+          "evidence": "'| **Status** | Accepted |' \u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "0000-index.md \u304c\u4f5c\u6210\u30fb\u66f4\u65b0\u3055\u308c\u3066\u3044\u308b",
+          "passed": true,
+          "evidence": "0000-index.md \u304c outputs/ \u306b\u5b58\u5728\u3057 ADR-0001 \u304c\u8a18\u8f09\u3055\u308c\u3066\u3044\u308b"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "ADR-0001 \u306e Status \u304c Superseded \u306b\u306a\u3063\u3066\u3044\u308b",
+          "passed": true,
+          "evidence": "'| **Status** | Superseded by ADR-0002 |' \u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "ADR-0001 \u306b ADR-0002 \u3078\u306e\u53c2\u7167\u304c\u3042\u308b",
+          "passed": true,
+          "evidence": "'## Superseded by' \u30bb\u30af\u30b7\u30e7\u30f3\u306b 0002 \u3078\u306e\u30ea\u30f3\u30af\u304c\u5b58\u5728"
+        },
+        {
+          "text": "ADR-0002 \u306b ADR-0001 \u3078\u306e Supersedes \u53c2\u7167\u304c\u3042\u308b",
+          "passed": true,
+          "evidence": "'| **Supersedes** | [ADR-0001...]' \u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "0000-index.md \u306b Superseded \u30bb\u30af\u30b7\u30e7\u30f3\u304c\u3042\u308b",
+          "passed": true,
+          "evidence": "'## Superseded / Deprecated' \u30bb\u30af\u30b7\u30e7\u30f3\u306b ADR-0001 \u304c\u8a18\u8f09\u3055\u308c\u3066\u3044\u308b"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "list_output \u306b Stage \u5225\u30b0\u30eb\u30fc\u30d7\u898b\u51fa\u3057\u304c\u3042\u308b",
+          "passed": true,
+          "evidence": "### Requirement, ### Basic Design, ### Detailed Design \u306e3\u898b\u51fa\u3057\u304c\u5b58\u5728"
+        },
+        {
+          "text": "check_output \u306b OK/WARNING/ERROR \u5224\u5b9a\u304c\u3042\u308b",
+          "passed": true,
+          "evidence": "\u2705 x2, \u26a0\ufe0f x1, \u274c x1 \u306e\u8a18\u53f7\u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "ADR-0001 (npm run test:e2e) \u304c OK \u5224\u5b9a",
+          "passed": true,
+          "evidence": "'ADR-0001 | Requirement | npm run test:e2e | \u2705 OK'"
+        },
+        {
+          "text": "ADR-0003 (archgate.config.ts \u306a\u3057) \u304c ERROR \u5224\u5b9a",
+          "passed": true,
+          "evidence": "'ADR-0003 | Basic Design | archgate.config.ts | \u274c ERROR'"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 2,
+        "failed": 3,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "ADR \u30d5\u30a1\u30a4\u30eb\u304c\u4f5c\u6210\u3055\u308c\u305f",
+          "passed": true,
+          "evidence": "ADR-0001.md \u304c outputs/ \u306b\u5b58\u5728"
+        },
+        {
+          "text": "Stage: Basic Design \u304c\u542b\u307e\u308c\u308b",
+          "passed": false,
+          "evidence": "\u30d5\u30a1\u30a4\u30eb\u306b Stage \u30d5\u30a3\u30fc\u30eb\u30c9\u306a\u3057 \u2014 'Status' \u30bb\u30af\u30b7\u30e7\u30f3\u306e\u307f"
+        },
+        {
+          "text": "Verification \u30d5\u30a3\u30fc\u30eb\u30c9\u306b npm run test:arch \u304c\u542b\u307e\u308c\u308b",
+          "passed": false,
+          "evidence": "Verification \u30d5\u30a3\u30fc\u30eb\u30c9\u304c\u5b58\u5728\u3057\u306a\u3044"
+        },
+        {
+          "text": "Status \u30d5\u30a3\u30fc\u30eb\u30c9\u304c\u542b\u307e\u308c\u308b",
+          "passed": true,
+          "evidence": "'## Status' \u30bb\u30af\u30b7\u30e7\u30f3\u304c\u5b58\u5728\u3057 'Accepted' \u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "0000-index.md \u304c\u4f5c\u6210\u30fb\u66f4\u65b0\u3055\u308c\u3066\u3044\u308b",
+          "passed": false,
+          "evidence": "outputs/ \u306b 0000-index.md \u304c\u5b58\u5728\u3057\u306a\u3044"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "ADR-0001 \u306e Status \u304c Superseded \u306b\u306a\u3063\u3066\u3044\u308b",
+          "passed": true,
+          "evidence": "'~~Accepted~~ \u2192 Replaced by ADR-0002' \u3067\u30b9\u30c6\u30fc\u30bf\u30b9\u5909\u66f4\u306f\u793a\u3055\u308c\u3066\u3044\u308b\u304c Superseded \u3068\u3044\u3046\u8a9e\u306f\u4f7f\u308f\u308c\u3066\u3044\u306a\u3044 (\u90e8\u5206\u4e00\u81f4)"
+        },
+        {
+          "text": "ADR-0001 \u306b ADR-0002 \u3078\u306e\u53c2\u7167\u304c\u3042\u308b",
+          "passed": true,
+          "evidence": "'**Replaced by:** ADR-0002 (Zod migration)' \u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "ADR-0002 \u306b ADR-0001 \u3078\u306e Supersedes \u53c2\u7167\u304c\u3042\u308b",
+          "passed": true,
+          "evidence": "'**Replaces:** ADR-0001' \u304c\u542b\u307e\u308c\u308b"
+        },
+        {
+          "text": "0000-index.md \u306b Superseded \u30bb\u30af\u30b7\u30e7\u30f3\u304c\u3042\u308b",
+          "passed": false,
+          "evidence": "index \u30d5\u30a1\u30a4\u30eb\u304c\u4f5c\u6210\u3055\u308c\u3066\u3044\u306a\u3044"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "list_output \u306b Stage \u5225\u30b0\u30eb\u30fc\u30d7\u898b\u51fa\u3057\u304c\u3042\u308b",
+          "passed": false,
+          "evidence": "list_output.md \u306f\u9023\u756a\u30ea\u30b9\u30c8\u306e\u307f\u3001Stage \u5225\u30b0\u30eb\u30fc\u30d7\u5316\u306a\u3057"
+        },
+        {
+          "text": "check_output \u306b OK/WARNING/ERROR \u5224\u5b9a\u304c\u3042\u308b",
+          "passed": false,
+          "evidence": "\u2705/\u26a0\ufe0f/\u274c \u8a18\u53f7\u306a\u3057\u3001\u2713/\u2717 \u8a18\u53f7\u306e\u307f\u4f7f\u7528"
+        },
+        {
+          "text": "ADR-0001 (npm run test:e2e) \u304c OK \u5224\u5b9a",
+          "passed": true,
+          "evidence": "'script exists in package.json \u2713' \u3067 OK \u3068\u5224\u5b9a\u3055\u308c\u3066\u3044\u308b"
+        },
+        {
+          "text": "ADR-0003 (archgate.config.ts \u306a\u3057) \u304c ERROR \u5224\u5b9a",
+          "passed": true,
+          "evidence": "'file not found \u2717' \u3067 NG \u3068\u5224\u5b9a\u3055\u308c\u3066\u3044\u308b"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.55,
+        "stddev": 0.1803,
+        "min": 0.4,
+        "max": 0.75
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.45",
+      "time_seconds": "+0.0",
+      "tokens": "+0"
+    }
+  },
+  "notes": []
+}

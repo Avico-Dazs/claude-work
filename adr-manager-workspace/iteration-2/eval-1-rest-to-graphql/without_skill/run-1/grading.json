@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "GraphQL 採用の新 ADR が作成された",
+      "passed": false,
+      "evidence": "ADR ファイルなし — 移行アドバイスのみ"
+    },
+    {
+      "text": "旧 REST ADR が Superseded になった",
+      "passed": false,
+      "evidence": "ADR-0001 ファイルが変更されていない"
+    },
+    {
+      "text": "相互リンクが張られている",
+      "passed": false,
+      "evidence": "ファイル変更なし"
+    },
+    {
+      "text": "通知に Superseded の情報が含まれる",
+      "passed": false,
+      "evidence": "📝 通知なし"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

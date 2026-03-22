@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "skill_name": "doc-requirements",
+    "skill_path": "/Users/dazs/repos/claude-work/adr-manager/doc-requirements",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-03-22T08:10:00Z",
+    "evals_run": ["loyalty-points-single-adr", "ears-pattern-coverage"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "loyalty-points-single-adr",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 177.5,
+        "tokens": 26195,
+        "tool_calls": 8,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "RDRA3.0 の6セクション（システムコンテキスト〜要件一覧）がすべて存在する", "passed": true, "evidence": "全6セクション確認"},
+        {"text": "EARS 記法のキーワードが含まれる", "passed": true, "evidence": "WHEN/WHILE/IF...THEN/shall を確認"},
+        {"text": "Event-driven WHEN ... shall が含まれる", "passed": true, "evidence": "REQ-001 で確認"},
+        {"text": "Unwanted IF...THEN が含まれる", "passed": true, "evidence": "REQ-003 で確認"},
+        {"text": "Mermaid ダイアグラムが1つ以上ある", "passed": true, "evidence": "7つのダイアグラムを確認"},
+        {"text": "UC-N ユースケース詳細テーブルがある", "passed": true, "evidence": "UC-1〜UC-4 を確認"},
+        {"text": "BR-ID ビジネスルール表に具体値がある", "passed": true, "evidence": "1%/100pt/1年を確認"},
+        {"text": "requirements-spec.md が出力される", "passed": true, "evidence": "ファイル作成確認"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "loyalty-points-single-adr",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.25,
+        "passed": 2,
+        "failed": 6,
+        "total": 8,
+        "time_seconds": 32.8,
+        "tokens": 10345,
+        "tool_calls": 2,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "RDRA3.0 の6セクション（システムコンテキスト〜要件一覧）がすべて存在する", "passed": false, "evidence": "FR-001〜FR-012 形式でセクション構造なし"},
+        {"text": "EARS 記法のキーワードが含まれる", "passed": false, "evidence": "自然文（〜すること形式）のみ"},
+        {"text": "Event-driven WHEN ... shall が含まれる", "passed": false, "evidence": "EARS パターン未使用"},
+        {"text": "Unwanted IF...THEN が含まれる", "passed": false, "evidence": "EARS パターン未使用"},
+        {"text": "Mermaid ダイアグラムが1つ以上ある", "passed": false, "evidence": "図なし"},
+        {"text": "UC-N ユースケース詳細テーブルがある", "passed": false, "evidence": "FR-N 形式のみ"},
+        {"text": "BR-ID ビジネスルール表に具体値がある", "passed": true, "evidence": "BR-001〜BR-004 に 1%/100pt/1年あり"},
+        {"text": "requirements-spec.md が出力される", "passed": true, "evidence": "ファイル作成確認"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "ears-pattern-coverage",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 77.0,
+        "tokens": 13876,
+        "tool_calls": 2,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "カート/注文に関する WHEN パターンが含まれる", "passed": true, "evidence": "REQ-002, REQ-006 等で確認"},
+        {"text": "在庫不足に関する IF...THEN パターンが含まれる", "passed": true, "evidence": "REQ-005, REQ-011, REQ-016 で確認"},
+        {"text": "RDRA3.0 基本セクションが存在する", "passed": true, "evidence": "全6セクション完備"},
+        {"text": "REQ-ID と EARS パターン列を持つ要件一覧テーブルがある", "passed": true, "evidence": "16件の機能要件 + 5件の非機能要件"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "ears-pattern-coverage",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 4,
+        "total": 4,
+        "time_seconds": 104.2,
+        "tokens": 13947,
+        "tool_calls": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "カート/注文に関する WHEN パターンが含まれる", "passed": false, "evidence": "CART-001〜形式の自然文のみ"},
+        {"text": "在庫不足に関する IF...THEN パターンが含まれる", "passed": false, "evidence": "EARS IF...THEN 未使用"},
+        {"text": "RDRA3.0 基本セクションが存在する", "passed": false, "evidence": "RDRA3.0 セクション構造なし"},
+        {"text": "REQ-ID と EARS パターン列を持つ要件一覧テーブルがある", "passed": false, "evidence": "EARS パターン列なし"}
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 127.3, "stddev": 50.3, "min": 77.0, "max": 177.5},
+      "tokens": {"mean": 20036, "stddev": 6160, "min": 13876, "max": 26195}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.125, "stddev": 0.125, "min": 0.0, "max": 0.25},
+      "time_seconds": {"mean": 68.5, "stddev": 35.7, "min": 32.8, "max": 104.2},
+      "tokens": {"mean": 12146, "stddev": 1801, "min": 10345, "max": 13947}
+    },
+    "delta": {
+      "pass_rate": "+0.875",
+      "time_seconds": "+58.8",
+      "tokens": "+7890"
+    }
+  },
+  "notes": [
+    "with_skill は全テストケースで 100% パス（RDRA3.0 + EARS の完全適合）",
+    "without_skill はビジネスルール表（BR-ID）と出力ファイル作成は達成するが、EARS 記法・RDRA3.0 構造・Mermaid 図を生成しない",
+    "eval-1（カート決済）では without_skill が 0% となり、スキルの差別化が明確",
+    "スキル使用により平均 58.8 秒の追加コストがあるが、pass_rate が +87.5% 向上する",
+    "BR-ID ビジネスルール表は without_skill でも生成される（スキルに依存しない可能性が高い assertion）"
+  ]
+}

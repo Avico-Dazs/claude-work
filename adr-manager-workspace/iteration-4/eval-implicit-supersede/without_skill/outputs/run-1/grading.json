@@ -1,0 +1,28 @@
+{
+  "eval_id": "eval-implicit-supersede",
+  "variant": "without_skill",
+  "run": 1,
+  "scenario": "Baseline: no skill loaded, user mentions Zod for validation.",
+  "checks": [
+    {
+      "id": "no_adr_management",
+      "description": "Does NOT perform any ADR management (baseline — skill not loaded)",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "answers_technical_question",
+      "description": "Provides useful Zod implementation guidance",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

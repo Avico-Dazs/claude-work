@@ -1,0 +1,53 @@
+{
+  "eval_id": 0,
+  "eval_name": "loyalty-points-single-adr",
+  "variant": "without_skill",
+  "expectations": [
+    {
+      "text": "RDRA3.0 の6セクション（システムコンテキスト〜要件一覧）がすべて存在する",
+      "passed": false,
+      "evidence": "FR-001〜FR-012 の機能要件リスト形式で出力されており、RDRA3.0 のシステムコンテキスト・ユースケース・状態モデルセクションは存在しない"
+    },
+    {
+      "text": "要件一覧に EARS 記法のキーワード（WHEN/WHILE/IF...THEN/shall）が含まれる",
+      "passed": false,
+      "evidence": "要件は自然文（「〜すること」形式）で記述されており EARS 記法は使用されていない"
+    },
+    {
+      "text": "購入完了→ポイント付与の WHEN ... shall が含まれる",
+      "passed": false,
+      "evidence": "EARS Event-driven パターンの WHEN ... shall は使用されていない"
+    },
+    {
+      "text": "100pt未満→利用拒否の IF...THEN が含まれる",
+      "passed": false,
+      "evidence": "EARS Unwanted behavior パターンの IF...THEN は使用されていない"
+    },
+    {
+      "text": "Mermaid ダイアグラムが1つ以上ある",
+      "passed": false,
+      "evidence": "エージェント出力によると Mermaid 図は含まれていない（テキストの要件リスト形式）"
+    },
+    {
+      "text": "UC-N 形式のユースケース詳細（アクター・事前条件）テーブルがある",
+      "passed": false,
+      "evidence": "FR-001〜FR-012 形式の機能要件リストで、UC-N テーブル形式は使用されていない"
+    },
+    {
+      "text": "BR-ID 形式のビジネスルール表に 1%/100pt/1年 の具体値がある",
+      "passed": true,
+      "evidence": "BR-001〜BR-004 のビジネスルール表に 1%、100ポイント、1ポイント=1円、1年の具体値が含まれている（エージェント報告より）"
+    },
+    {
+      "text": "requirements-spec.md が出力される",
+      "passed": true,
+      "evidence": "ファイルが without_skill/outputs/requirements-spec.md に作成されている"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 6,
+    "total": 8,
+    "pass_rate": 0.25
+  }
+}

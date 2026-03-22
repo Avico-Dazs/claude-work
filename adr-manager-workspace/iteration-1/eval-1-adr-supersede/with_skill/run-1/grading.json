@@ -1,0 +1,32 @@
+{
+  "eval_id": 1,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "ADR-0001 の Status が Superseded になっている",
+      "passed": true,
+      "evidence": "'| **Status** | Superseded by ADR-0002 |' が含まれる"
+    },
+    {
+      "text": "ADR-0001 に ADR-0002 への参照がある",
+      "passed": true,
+      "evidence": "'## Superseded by' セクションに 0002 へのリンクが存在"
+    },
+    {
+      "text": "ADR-0002 に ADR-0001 への Supersedes 参照がある",
+      "passed": true,
+      "evidence": "'| **Supersedes** | [ADR-0001...]' が含まれる"
+    },
+    {
+      "text": "0000-index.md に Superseded セクションがある",
+      "passed": true,
+      "evidence": "'## Superseded / Deprecated' セクションに ADR-0001 が記載されている"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "deliverables/requirements/ に成果物ドキュメントが生成された",
+      "passed": true,
+      "evidence": "requirements-spec.md が outputs/ に存在し /docs/deliverables/requirements/ に配置"
+    },
+    {
+      "text": "ADR の内容が人間向けに展開されている",
+      "passed": true,
+      "evidence": "概要・背景・受入条件・トレードオフが日本語の人間向け形式で展開されている"
+    },
+    {
+      "text": "自動生成ヘッダーがある",
+      "passed": true,
+      "evidence": "'本書は ADR（アーキテクチャ決定記録）から自動生成されています。原典: /docs/adr/'"
+    },
+    {
+      "text": "変更履歴セクションがある",
+      "passed": true,
+      "evidence": "'## 変更履歴' テーブルが存在し '*(変更履歴なし)*' と明記"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "ADR が自動作成された",
+      "passed": true,
+      "evidence": "0001-purchase-point-reward-system.md が outputs/ に存在"
+    },
+    {
+      "text": "Stage が Requirement に推論されている",
+      "passed": true,
+      "evidence": "'| **Stage** | Requirement |' — ビジネスルールとして正しく判断"
+    },
+    {
+      "text": "ポイントルールが Decision に含まれる",
+      "passed": true,
+      "evidence": "1%・100ポイント・1pt=1円の3ルールが Decision に明記"
+    },
+    {
+      "text": "Verification に E2E テストが記載されている",
+      "passed": true,
+      "evidence": "'npm run test:e2e -- --grep \"point reward\"' が Verification に記載"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

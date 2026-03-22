@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "adr-list-and-check",
+  "prompt": "/tmp/adr-check-test/docs/adr/ に複数の ADR がある。adr:list で有効な ADR を Stage 別に一覧表示し、次に adr:check で Verification コマンドの実行可能性を確認してほしい。ADR-0001 は `npm run test:e2e`（package.json あり）、ADR-0002 は `npx oxlint`（インストールされていない）、ADR-0003 は `archgate.config.ts`（ファイルなし）を検証コマンドとして持つ。",
+  "assertions": []
+}

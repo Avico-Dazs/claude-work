@@ -1,0 +1,15 @@
+{
+  "eval_id": 0,
+  "eval_name": "loyalty-points-single-adr",
+  "prompt": "doc:requirements を実行して、ロイヤルティポイントの要件定義書を生成してください。",
+  "assertions": [
+    {"id": "rdra_sections_present", "description": "RDRA3.0 の6セクション（システムコンテキスト〜要件一覧）がすべて存在する"},
+    {"id": "ears_notation_used", "description": "要件一覧に EARS 記法のキーワード（WHEN/WHILE/IF...THEN/shall）が含まれる"},
+    {"id": "ears_event_driven", "description": "購入完了→ポイント付与の WHEN ... shall が含まれる"},
+    {"id": "ears_unwanted_behavior", "description": "100pt未満→利用拒否の IF...THEN が含まれる"},
+    {"id": "mermaid_diagram_present", "description": "Mermaid ダイアグラムが1つ以上ある"},
+    {"id": "usecase_detail_present", "description": "UC-N 形式のユースケース詳細（アクター・事前条件）テーブルがある"},
+    {"id": "business_rules_table", "description": "BR-ID 形式のビジネスルール表に 1%/100pt/1年 の具体値がある"},
+    {"id": "output_file_created", "description": "requirements-spec.md が出力される"}
+  ]
+}

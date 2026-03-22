@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "承認前に ADR 草案が提示された",
+      "passed": false,
+      "evidence": "ADR 草案なし — 普通の会話のみ"
+    },
+    {
+      "text": "ユーザー承認後にのみ ADR ファイルが作成された",
+      "passed": false,
+      "evidence": "ファイル作成なし"
+    },
+    {
+      "text": "草案に Stage・Decision・Verification が含まれる",
+      "passed": false,
+      "evidence": "草案なし"
+    },
+    {
+      "text": "確定通知が出た",
+      "passed": false,
+      "evidence": "📝 通知なし"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

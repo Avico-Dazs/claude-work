@@ -1,0 +1,53 @@
+{
+  "eval_id": 0,
+  "eval_name": "loyalty-points-single-adr",
+  "variant": "with_skill",
+  "expectations": [
+    {
+      "text": "RDRA3.0 の6セクション（システムコンテキスト〜要件一覧）がすべて存在する",
+      "passed": true,
+      "evidence": "## 1. システムコンテキスト, ## 2. ビジネスコンテキスト, ## 3. ユースケース, ## 4. 情報モデル, ## 5. 状態モデル, ## 6. 要件一覧（EARS）の全6セクションを確認"
+    },
+    {
+      "text": "要件一覧に EARS 記法のキーワード（WHEN/WHILE/IF...THEN/shall）が含まれる",
+      "passed": true,
+      "evidence": "REQ-001〜010 に WHEN, WHILE, IF...THEN, shall が複数含まれている"
+    },
+    {
+      "text": "購入完了→ポイント付与の WHEN ... shall が含まれる",
+      "passed": true,
+      "evidence": "REQ-001: 'WHEN a purchase is confirmed, the loyalty system shall award points equal to 1% of the purchase amount.'"
+    },
+    {
+      "text": "100pt未満→利用拒否の IF...THEN が含まれる",
+      "passed": true,
+      "evidence": "REQ-003: 'IF the available point balance is below 100 points, THEN the loyalty system shall reject the redemption request.'"
+    },
+    {
+      "text": "Mermaid ダイアグラムが1つ以上ある",
+      "passed": true,
+      "evidence": "flowchart LR (システムコンテキスト図), flowchart TD (ユースケース図), 4つの sequenceDiagram, stateDiagram-v2 の合計7ダイアグラムを確認"
+    },
+    {
+      "text": "UC-N 形式のユースケース詳細（アクター・事前条件）テーブルがある",
+      "passed": true,
+      "evidence": "UC-1〜UC-4 それぞれに | アクター | 事前条件 | 基本フロー | 代替フロー・例外 | 事後条件 | 受入コマンド | のテーブルを確認"
+    },
+    {
+      "text": "BR-ID 形式のビジネスルール表に 1%/100pt/1年 の具体値がある",
+      "passed": true,
+      "evidence": "BR-001: '1%', BR-002: '100ポイント', BR-003: '1ポイント = 1円', BR-004: '付与日から1年間' を確認"
+    },
+    {
+      "text": "requirements-spec.md が出力される",
+      "passed": true,
+      "evidence": "ファイルが with_skill/outputs/requirements-spec.md に正常に作成されている"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

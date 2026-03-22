@@ -1,0 +1,6 @@
+{
+  "eval_id": 0,
+  "eval_name": "adr-new-basic-design",
+  "prompt": "adr:new を使って新しい ADR を作りたい。Next.js プロジェクトで App Router を採用することに決めたので、Basic Design の ADR を作ってほしい。検証コマンドは `npm run test:arch` を使う予定。ファイルは /tmp/adr-test-project/docs/adr/ に保存してほしい。",
+  "assertions": []
+}

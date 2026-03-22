@@ -1,0 +1,1 @@
+{"eval_id": 1, "eval_name": "rest-to-graphql-supersede", "prompt": "うちのプロジェクト、最初は REST API で設計してたんですが、フロントが複数あってクエリが複雑になってきたので、GraphQL に移行しようと思います。移行手順を相談したいです。", "assertions": []}

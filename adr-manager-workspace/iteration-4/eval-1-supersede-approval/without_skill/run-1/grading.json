@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Supersede の変更提案が提示された",
+      "passed": false,
+      "evidence": "ADR 変更提案なし — 移行アドバイスのみ"
+    },
+    {
+      "text": "旧 ADR の変更と新 ADR の作成が一緒に提案された",
+      "passed": false,
+      "evidence": "提案なし"
+    },
+    {
+      "text": "承認後に旧 ADR が Superseded になった",
+      "passed": false,
+      "evidence": "ファイル変更なし"
+    },
+    {
+      "text": "承認後に新 ADR が作成された",
+      "passed": false,
+      "evidence": "ファイル作成なし"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

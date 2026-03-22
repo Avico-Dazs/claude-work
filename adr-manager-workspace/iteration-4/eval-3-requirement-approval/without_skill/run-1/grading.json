@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Requirement ステージの草案が提示された",
+      "passed": false,
+      "evidence": "ADR 草案なし"
+    },
+    {
+      "text": "ポイントルールが草案の Decision に含まれる",
+      "passed": false,
+      "evidence": "草案なし"
+    },
+    {
+      "text": "差し戻し後に草案が修正された",
+      "passed": false,
+      "evidence": "構造的な差し戻しプロセスなし — ユーザーが自ら有効期限を指摘しただけ"
+    },
+    {
+      "text": "承認後に ADR ファイルが作成された",
+      "passed": false,
+      "evidence": "ファイル作成なし"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

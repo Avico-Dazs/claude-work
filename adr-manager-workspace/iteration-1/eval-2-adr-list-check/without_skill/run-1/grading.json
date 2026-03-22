@@ -1,0 +1,32 @@
+{
+  "eval_id": 2,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "list_output に Stage 別グループ見出しがある",
+      "passed": false,
+      "evidence": "list_output.md は連番リストのみ、Stage 別グループ化なし"
+    },
+    {
+      "text": "check_output に OK/WARNING/ERROR 判定がある",
+      "passed": false,
+      "evidence": "✅/⚠️/❌ 記号なし、✓/✗ 記号のみ使用"
+    },
+    {
+      "text": "ADR-0001 (npm run test:e2e) が OK 判定",
+      "passed": true,
+      "evidence": "'script exists in package.json ✓' で OK と判定されている"
+    },
+    {
+      "text": "ADR-0003 (archgate.config.ts なし) が ERROR 判定",
+      "passed": true,
+      "evidence": "'file not found ✗' で NG と判定されている"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  }
+}

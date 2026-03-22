@@ -1,0 +1,86 @@
+{
+  "skill_name": "doc-requirements",
+  "evals": [
+    {
+      "id": 0,
+      "name": "loyalty-points-single-adr",
+      "prompt": "doc:requirements を実行して、ロイヤルティポイントの要件定義書を生成してください。",
+      "expected_output": "RDRA3.0 構造（システムコンテキスト・ビジネスコンテキスト・ユースケース・情報モデル・状態モデル・要件一覧）で構成され、各要件が EARS 記法で記述された requirements-spec.md",
+      "files": [
+        "/tmp/eval3-4-with/docs/adr/0000-index.md",
+        "/tmp/eval3-4-with/docs/adr/0001-loyalty-points-requirement.md"
+      ],
+      "assertions": [
+        {
+          "id": "rdra_sections_present",
+          "description": "RDRA3.0 の6セクション（システムコンテキスト・ビジネスコンテキスト・ユースケース・情報モデル・状態モデル・要件一覧）がすべて存在する",
+          "check": "output contains '## 1. システムコンテキスト' AND '## 2. ビジネスコンテキスト' AND '## 3. ユースケース' AND '## 4. 情報モデル' AND '## 5. 状態モデル' AND '## 6. 要件一覧'"
+        },
+        {
+          "id": "ears_notation_used",
+          "description": "要件一覧セクションに EARS 記法のキーワード（WHEN/WHILE/IF...THEN/The...shall）が1件以上含まれる",
+          "check": "output contains 'WHEN' OR 'WHILE' OR 'IF' and 'THEN' OR 'shall'"
+        },
+        {
+          "id": "ears_event_driven",
+          "description": "購入完了をトリガーにした Event-driven 要件（WHEN ... shall）が含まれる",
+          "check": "output contains 'WHEN' and 'shall' — specifically around purchase/point award scenario"
+        },
+        {
+          "id": "ears_unwanted_behavior",
+          "description": "100pt未満の制限を表す Unwanted behavior 要件（IF...THEN...shall）が含まれる",
+          "check": "output contains 'IF' and 'THEN' and '100' — checking the minimum threshold rule"
+        },
+        {
+          "id": "mermaid_diagram_present",
+          "description": "少なくとも1つの Mermaid ダイアグラムが含まれる",
+          "check": "output contains '```mermaid'"
+        },
+        {
+          "id": "usecase_detail_present",
+          "description": "UC-N 形式のユースケース詳細テーブルが存在する",
+          "check": "output contains 'UC-' and 'アクター' and '事前条件'"
+        },
+        {
+          "id": "business_rules_table",
+          "description": "ビジネスルール表（BR-ID, ルール）が存在し、1%・100pt・1年などの具体値が含まれる",
+          "check": "output contains 'BR-' and ('1%' OR '100' OR '1年')"
+        },
+        {
+          "id": "output_file_created",
+          "description": "requirements-spec.md が /docs/deliverables/requirements/ に作成される",
+          "check": "file exists at /docs/deliverables/requirements/requirements-spec.md"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "ears-pattern-coverage",
+      "prompt": "要件定義書を作ってください。ユーザーが商品をカートに入れてから決済完了までのフローと、在庫が不足している場合のエラーハンドリングが含まれるようにしてください。",
+      "expected_output": "Event-driven (WHEN カートに追加) と Unwanted behavior (IF 在庫不足 THEN エラー) の両方の EARS パターンを使い、RDRA3.0 形式で記述された要件定義書",
+      "files": [],
+      "assertions": [
+        {
+          "id": "ears_when_pattern",
+          "description": "カートや注文に関する WHEN パターンが含まれる",
+          "check": "output contains 'WHEN'"
+        },
+        {
+          "id": "ears_if_then_pattern",
+          "description": "在庫不足に関する IF...THEN パターンが含まれる",
+          "check": "output contains 'IF' and 'THEN'"
+        },
+        {
+          "id": "rdra_structure",
+          "description": "RDRA3.0 の基本セクション構造が存在する",
+          "check": "output contains 'システムコンテキスト' and 'ユースケース' and '要件一覧'"
+        },
+        {
+          "id": "req_id_table",
+          "description": "REQ-ID 形式の要件一覧テーブルが存在する",
+          "check": "output contains 'REQ-' and 'EARS パターン'"
+        }
+      ]
+    }
+  ]
+}

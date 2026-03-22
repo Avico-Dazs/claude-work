@@ -1,0 +1,49 @@
+{
+  "eval_id": "eval-implicit-supersede",
+  "variant": "with_skill",
+  "run": 1,
+  "scenario": "User mentions Zod naturally without saying '変更します' or '移行します'. Existing ADR-0001 mandates class-validator.",
+  "checks": [
+    {
+      "id": "implicit_detection",
+      "description": "Detects conflict with ADR-0001 without explicit migration keywords",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "reads_index_first",
+      "description": "Reads 0000-index.md before responding to check existing ADRs",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "supersede_proposal_shown",
+      "description": "Shows 📋 ADR 変更提案（Supersede）with both old status change and new ADR draft",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "no_files_before_approval",
+      "description": "No files created before human approval",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "id": "correct_old_adr_identified",
+      "description": "Correctly identifies ADR-0001 (class-validator) as conflicting",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

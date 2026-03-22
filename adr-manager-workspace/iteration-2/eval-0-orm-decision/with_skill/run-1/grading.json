@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "ADR ファイルが自動作成された",
+      "passed": true,
+      "evidence": "0001-use-prisma-as-orm.md が outputs/ に存在"
+    },
+    {
+      "text": "Decision に Prisma 採用が明記されている",
+      "passed": true,
+      "evidence": "ADR タイトルに 'Prisma を ORM として採用' と Decision に採用の記載あり"
+    },
+    {
+      "text": "Stage が Basic/Detailed Design に推論されている",
+      "passed": true,
+      "evidence": "'| **Stage** | Basic Design |' — ORM 選択はアーキテクチャレベルと正しく判断"
+    },
+    {
+      "text": "📝 通知が会話中に出力された",
+      "passed": true,
+      "evidence": "'📝 ADR-0001 を記録しました（Basic Design: Prisma を ORM として採用）'"
+    },
+    {
+      "text": "0000-index.md が作成・更新された",
+      "passed": true,
+      "evidence": "outputs/ に 0000-index.md が存在"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

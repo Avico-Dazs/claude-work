@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "ADR が自動作成された",
+      "passed": true,
+      "evidence": "0001-frontend-error-handling-with-neverthrow.md が outputs/ に存在"
+    },
+    {
+      "text": "Stage が Detailed Design に推論されている",
+      "passed": true,
+      "evidence": "'| **Stage** | Detailed Design |' — 実装パターンとして正しく判断"
+    },
+    {
+      "text": "Verification フィールドが推論されて記載されている",
+      "passed": true,
+      "evidence": "npm run test:unit + ESLint no-restricted-syntax ルールが Verification に記載"
+    },
+    {
+      "text": "Context に会話の背景が要約されている",
+      "passed": true,
+      "evidence": "'try-catch が散在しており' という背景が Context に反映されている"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

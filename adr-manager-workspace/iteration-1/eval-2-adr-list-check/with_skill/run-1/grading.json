@@ -1,0 +1,32 @@
+{
+  "eval_id": 2,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "list_output に Stage 別グループ見出しがある",
+      "passed": true,
+      "evidence": "### Requirement, ### Basic Design, ### Detailed Design の3見出しが存在"
+    },
+    {
+      "text": "check_output に OK/WARNING/ERROR 判定がある",
+      "passed": true,
+      "evidence": "✅ x2, ⚠️ x1, ❌ x1 の記号が含まれる"
+    },
+    {
+      "text": "ADR-0001 (npm run test:e2e) が OK 判定",
+      "passed": true,
+      "evidence": "'ADR-0001 | Requirement | npm run test:e2e | ✅ OK'"
+    },
+    {
+      "text": "ADR-0003 (archgate.config.ts なし) が ERROR 判定",
+      "passed": true,
+      "evidence": "'ADR-0003 | Basic Design | archgate.config.ts | ❌ ERROR'"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

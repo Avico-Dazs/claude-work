@@ -1,0 +1,1 @@
+{"eval_id": 2, "eval_name": "result-pattern-auto-detect", "prompt": "フロントエンドのエラーハンドリングをどうするか悩んでいます。今は try-catch を散在させているんですが、Result 型パターン（neverthrow ライブラリ）を使って統一したいと思っています。どう思いますか？", "assertions": []}

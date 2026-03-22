@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "GraphQL 採用の新 ADR が作成された",
+      "passed": true,
+      "evidence": "0002-adopt-graphql.md が outputs/ に存在"
+    },
+    {
+      "text": "旧 REST ADR が Superseded になった",
+      "passed": true,
+      "evidence": "'| **Status** | Superseded by ADR-0002 |' が ADR-0001 に含まれる"
+    },
+    {
+      "text": "相互リンクが張られている",
+      "passed": true,
+      "evidence": "ADR-0001 に '## Superseded by' セクション、ADR-0002 に '| **Supersedes** | [ADR-0001...]|'"
+    },
+    {
+      "text": "通知に Superseded の情報が含まれる",
+      "passed": true,
+      "evidence": "conversation.md に Superseded 操作の記録と 📝 通知"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

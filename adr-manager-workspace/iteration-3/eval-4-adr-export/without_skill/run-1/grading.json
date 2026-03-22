@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "deliverables/requirements/ に成果物ドキュメントが生成された",
+      "passed": true,
+      "evidence": "requirements-spec.md が outputs/ に存在（ただし deliverables/ 分離は実施されていない）"
+    },
+    {
+      "text": "ADR の内容が人間向けに展開されている",
+      "passed": true,
+      "evidence": "背景・課題・要件内容・検証方法・期待効果・リスクが展開されている"
+    },
+    {
+      "text": "自動生成ヘッダーがある",
+      "passed": true,
+      "evidence": "'このドキュメントは ADR から自動生成されました' がフッターに存在"
+    },
+    {
+      "text": "変更履歴セクションがある",
+      "passed": false,
+      "evidence": "変更履歴セクションなし — '除外 ADR' セクションはあるが変更履歴ではない"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  }
+}

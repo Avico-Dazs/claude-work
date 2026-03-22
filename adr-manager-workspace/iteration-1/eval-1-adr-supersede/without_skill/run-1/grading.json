@@ -1,0 +1,32 @@
+{
+  "eval_id": 1,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "ADR-0001 の Status が Superseded になっている",
+      "passed": true,
+      "evidence": "'~~Accepted~~ → Replaced by ADR-0002' でステータス変更は示されているが Superseded という語は使われていない (部分一致)"
+    },
+    {
+      "text": "ADR-0001 に ADR-0002 への参照がある",
+      "passed": true,
+      "evidence": "'**Replaced by:** ADR-0002 (Zod migration)' が含まれる"
+    },
+    {
+      "text": "ADR-0002 に ADR-0001 への Supersedes 参照がある",
+      "passed": true,
+      "evidence": "'**Replaces:** ADR-0001' が含まれる"
+    },
+    {
+      "text": "0000-index.md に Superseded セクションがある",
+      "passed": false,
+      "evidence": "index ファイルが作成されていない"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  }
+}

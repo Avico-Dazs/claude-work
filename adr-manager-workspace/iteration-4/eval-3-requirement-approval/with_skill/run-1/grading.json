@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "Requirement ステージの草案が提示された",
+      "passed": true,
+      "evidence": "提案に 'Stage: Requirement' が含まれる"
+    },
+    {
+      "text": "ポイントルールが草案の Decision に含まれる",
+      "passed": true,
+      "evidence": "1%・100pt・1pt=1円が Decision に記載"
+    },
+    {
+      "text": "差し戻し後に草案が修正された",
+      "passed": true,
+      "evidence": "Turn3 の差し戻し（有効期限なし）後、Turn4 で有効期限追加の修正版を再提示"
+    },
+    {
+      "text": "承認後に ADR ファイルが作成された",
+      "passed": true,
+      "evidence": "Turn5 の OK 後に 0001-purchase-point-reward.md が作成、有効期限も含む"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

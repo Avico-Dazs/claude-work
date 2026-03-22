@@ -1,0 +1,37 @@
+{
+  "eval_id": 0,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "ADR ファイルが作成された",
+      "passed": true,
+      "evidence": "ADR-0001.md が outputs/ に存在"
+    },
+    {
+      "text": "Stage: Basic Design が含まれる",
+      "passed": false,
+      "evidence": "ファイルに Stage フィールドなし — 'Status' セクションのみ"
+    },
+    {
+      "text": "Verification フィールドに npm run test:arch が含まれる",
+      "passed": false,
+      "evidence": "Verification フィールドが存在しない"
+    },
+    {
+      "text": "Status フィールドが含まれる",
+      "passed": true,
+      "evidence": "'## Status' セクションが存在し 'Accepted' が含まれる"
+    },
+    {
+      "text": "0000-index.md が作成・更新されている",
+      "passed": false,
+      "evidence": "outputs/ に 0000-index.md が存在しない"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 3,
+    "total": 5,
+    "pass_rate": 0.4
+  }
+}

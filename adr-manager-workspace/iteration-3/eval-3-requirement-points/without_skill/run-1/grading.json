@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "ADR が自動作成された",
+      "passed": false,
+      "evidence": "ADR ファイルなし — 要件整理と質問のみ"
+    },
+    {
+      "text": "Stage が Requirement に推論されている",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    },
+    {
+      "text": "ポイントルールが Decision に含まれる",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    },
+    {
+      "text": "Verification に E2E テストが記載されている",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

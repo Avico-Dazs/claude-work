@@ -1,0 +1,6 @@
+{
+  "eval_id": 1,
+  "eval_name": "adr-supersede-cross-link",
+  "prompt": "既存のプロジェクトで ADR の置換をしたい。/tmp/adr-supersede-test/docs/adr/ に ADR-0001（class-validator を使う、Accepted）がある状態で、新しく ADR-0002（Zod に移行する、Accepted）を作り、`adr:supersede 0001 0002` で置き換えてほしい。相互リンクと Status 変更を正しくやってほしい。",
+  "assertions": []
+}

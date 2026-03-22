@@ -1,0 +1,1 @@
+{"eval_id": 0, "eval_name": "orm-decision-auto-detect", "prompt": "新しい Node.js バックエンドプロジェクトを始めます。ORM は Prisma と TypeORM で迷っているんですが、どちらがいいですか？型安全性を重視したいです。", "assertions": []}

@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "ADR ファイルが自動作成された",
+      "passed": false,
+      "evidence": "ADR ファイルなし — conversation.md のみ"
+    },
+    {
+      "text": "Decision に Prisma 採用が明記されている",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    },
+    {
+      "text": "Stage が Basic/Detailed Design に推論されている",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    },
+    {
+      "text": "📝 通知が会話中に出力された",
+      "passed": false,
+      "evidence": "📝 通知なし — conversation.md に ADR の記録なし"
+    },
+    {
+      "text": "0000-index.md が作成・更新された",
+      "passed": false,
+      "evidence": "0000-index.md 作成なし"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 5,
+    "total": 5,
+    "pass_rate": 0.0
+  }
+}

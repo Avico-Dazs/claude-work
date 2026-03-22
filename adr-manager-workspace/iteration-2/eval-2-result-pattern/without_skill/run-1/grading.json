@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "ADR が自動作成された",
+      "passed": false,
+      "evidence": "ADR ファイルなし — 'ADR を作成してください と依頼を' と促すだけ"
+    },
+    {
+      "text": "Stage が Detailed Design に推論されている",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    },
+    {
+      "text": "Verification フィールドが推論されて記載されている",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    },
+    {
+      "text": "Context に会話の背景が要約されている",
+      "passed": false,
+      "evidence": "ADR ファイルが存在しない"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "eval_id": 1,
+  "eval_name": "ears-pattern-coverage",
+  "variant": "without_skill",
+  "expectations": [
+    {
+      "text": "カート/注文に関する WHEN パターンが含まれる",
+      "passed": false,
+      "evidence": "CART-001〜、CHK-001〜 形式の機能要件が自然文で記述されており、EARS の WHEN パターンは使用されていない"
+    },
+    {
+      "text": "在庫不足に関する IF...THEN パターンが含まれる",
+      "passed": false,
+      "evidence": "在庫不足のエラーハンドリングは詳細に記述されているが、EARS の IF...THEN 形式は使用されていない"
+    },
+    {
+      "text": "RDRA3.0 基本セクション（システムコンテキスト・ユースケース・要件一覧）が存在する",
+      "passed": false,
+      "evidence": "概要・ユーザーストーリー・機能要件・フロー図の構成で、RDRA3.0 のシステムコンテキスト・情報モデル・状態モデルセクションは存在しない"
+    },
+    {
+      "text": "REQ-ID と EARS パターン列を持つ要件一覧テーブルがある",
+      "passed": false,
+      "evidence": "CART-001〜、CHK-001〜、INV-001〜、PAY-001〜 の機能要件 ID が使用されているが EARS パターン列は存在しない"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}
